@@ -27,6 +27,10 @@ app.post('/message',(req,res)=>{
     res.json("Message successfully sent")
 })
 
+app.get("/",(req,res)=>{
+    res.status(200).json("wa_backend")
+})
+
 const port = process.env.PORT;
 app.listen(port,()=>{
     console.log(`listening on port ${port}`)
