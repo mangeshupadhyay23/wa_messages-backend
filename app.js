@@ -21,7 +21,7 @@ app.post('/message',(req,res)=>{
         body: req.body.message, 
         from: 'whatsapp:+14155238886',       
         to: `whatsapp:+${req.body.to}`
-    }).then(message => console.log("Message sent"))
+    }).then(message => console.log(message))
     .catch(err=>res.status(400).json({error:err}))
     
     res.json("Message successfully sent")
